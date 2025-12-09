@@ -1,0 +1,158 @@
+[
+  {
+    "stage": 0,
+    "description": "Boden - Schritt 1",
+    "graphic": [
+      "          ",
+      "          ",
+      "          ",
+      "          ",
+      "          ",
+      "          ",
+      "========="
+    ]
+  },
+  {
+    "stage": 1,
+    "description": "Boden - Schritt 2 (schmäler)",
+    "graphic": [
+      "          ",
+      "          ",
+      "          ",
+      "          ",
+      "          ",
+      "  =====   ",
+      "========="
+    ]
+  },
+  {
+    "stage": 2,
+    "description": "Pfosten",
+    "graphic": [
+      "|         ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 3,
+    "description": "Pfosten + Querbalken",
+    "graphic": [
+      "+---+     ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 4,
+    "description": "Pfosten + Querbalken + Aufhängung",
+    "graphic": [
+      "+---+     ",
+      "|   |     ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 5,
+    "description": "Galgen komplett (Seil)",
+    "graphic": [
+      "+---+     ",
+      "|   |     ",
+      "|   |     ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 6,
+    "description": "Galgen + Kopf",
+    "graphic": [
+      "+---+     ",
+      "|   |     ",
+      "|   O     ",
+      "|         ",
+      "|         ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 7,
+    "description": "Galgen + Kopf + Körper",
+    "graphic": [
+      "+---+     ",
+      "|   |     ",
+      "|   O     ",
+      "|   |     ",
+      "|         ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 8,
+    "description": "Galgen + Kopf + Körper + Arm links",
+    "graphic": [
+      "+---+     ",
+      "|   |     ",
+      "|   O     ",
+      "|  /|     ",
+      "|         ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 9,
+    "description": "Galgen + Kopf + Körper + beide Arme",
+    "graphic": [
+      "+---+     ",
+      "|   |     ",
+      "|   O     ",
+      "|  /|\\    ",
+      "|         ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 10,
+    "description": "Galgen + Kopf + Körper + Arme + Bein links",
+    "graphic": [
+      "+---+     ",
+      "|   |     ",
+      "|   O     ",
+      "|  /|\\    ",
+      "|  /      ",
+      "|         ",
+      "========="
+    ]
+  },
+  {
+    "stage": 11,
+    "description": "Komplett - Spiel verloren",
+    "graphic": [
+      "+---+     ",
+      "|   |     ",
+      "|   O     ",
+      "|  /|\\    ",
+      "|  / \\    ",
+      "|         ",
+      "========="
+    ]
+  }
+]
