@@ -1,0 +1,5 @@
+def wort_erzeugen() -> str:
+    pass
+
+def hangman_vorlage() -> list[dict]:
+    pass
