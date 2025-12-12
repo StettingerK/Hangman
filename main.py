@@ -1,3 +1,6 @@
+import darstellungsschicht
+import datenschicht
+
 def buchstabe_pruefen(wort:str, buchstabe:str) -> bool:
     pass
 
@@ -6,7 +9,8 @@ def wort_pruefen(wort:str, pruef_wort:str) -> bool:
 
 
 def main():
-    pass
+    spieler:list = darstellungsschicht.eingabe_Spieler()
+    
 
 
 if __name__ == "__main__":
