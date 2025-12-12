@@ -1,3 +1,5 @@
+import datenschicht
+
 def eingabe_spieler() -> list:
     spieler = []
     while True:
@@ -12,7 +14,10 @@ def eingabe_spieler() -> list:
         return spieler
 
 def hangman_zeichnen(hangman_list:list[dict], i:int):
-    pass
+    for stage in hangman_list:
+      if stage["stage"] == i:
+        for a in stage["graphic"]:
+            print(a)
 
 def wort_darstellen(ausgabe:str):
     pass
@@ -21,4 +26,5 @@ def buchstaben_raten() -> str:
     pass
 
 if __name__ == "__main__":
-    eingabe_spieler()
+    #eingabe_spieler()
+    hangman_zeichnen(datenschicht.hangman_vorlage(), 3)
