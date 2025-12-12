@@ -23,8 +23,28 @@ def wort_darstellen(ausgabe:str):
     print(f"\n{ausgabe}")
 
 def buchstaben_raten() -> str:
-    pass
+    erlaubte_buchstaben = "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜß"
 
-if __name__ == "__main__":
+    while True:
+        guess = input("Geben Sie einen Buchstaben oder das gesuchte Wort ein: ").strip().upper()
+
+        #Leere Eingabe verhindern
+        if not guess:
+            print("Eingabe darf nicht leer sein!")
+            continue
+
+        #Prüfen, ob NUR erlaubte Buchstaben enthalten sind
+        for buchstabe in guess:
+            if buchstabe not in erlaubte_buchstaben:
+                print("Bitte nur Buchstaben (A-Z, Ä, Ö, Ü, ß) eingeben!")
+                break
+        else:
+            return guess
+
+def print_line():
+    print("-"*40)
+
+#if __name__ == "__main__":
     #eingabe_spieler()
-    hangman_zeichnen(datenschicht.hangman_vorlage(), 3)
+    #hangman_zeichnen(datenschicht.hangman_vorlage(), 3)
+    #buchstaben_raten()
