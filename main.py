@@ -44,6 +44,9 @@ def main():
             print("Falsche Buchstaben: " + ", ".join(falsche_buchstaben))
         darstellungsschicht.wort_darstellen("".join(zeichen +" " for zeichen in visible_wort))
 
+        if wrong_guesses == 10:
+            print(f"Ihr habt verloren\nDas Wort war: {hiden_wort}")
+            break
         # Buchstaben Überprüfen und verändern
         buchstabe = darstellungsschicht.buchstaben_raten()
         if len(buchstabe) == 1: # überprüfe ob Buchstabe oder Wort eingegeben
@@ -52,7 +55,8 @@ def main():
             if new_visible_wort != visible_wort:
                 visible_wort = new_visible_wort
             else:
-                falsche_buchstaben.append(buchstabe)
+                if buchstabe not in falsche_buchstaben:
+                    falsche_buchstaben.append(buchstabe)
                 wrong_guesses += 1
         else: 
             # Wenn Wort eingegeben
