@@ -14,19 +14,6 @@
   },
   {
     "stage": 1,
-    "description": "Boden - Schritt 2 (schmäler)",
-    "graphic": [
-      "          ",
-      "          ",
-      "          ",
-      "          ",
-      "          ",
-      "  =====   ",
-      "========="
-    ]
-  },
-  {
-    "stage": 2,
     "description": "Pfosten",
     "graphic": [
       "|         ",
@@ -39,7 +26,7 @@
     ]
   },
   {
-    "stage": 3,
+    "stage": 2,
     "description": "Pfosten + Querbalken",
     "graphic": [
       "+---+     ",
@@ -52,7 +39,7 @@
     ]
   },
   {
-    "stage": 4,
+    "stage": 3,
     "description": "Pfosten + Querbalken + Aufhängung",
     "graphic": [
       "+---+     ",
@@ -65,7 +52,7 @@
     ]
   },
   {
-    "stage": 5,
+    "stage": 4,
     "description": "Galgen komplett (Seil)",
     "graphic": [
       "+---+     ",
@@ -78,7 +65,7 @@
     ]
   },
   {
-    "stage": 6,
+    "stage": 5,
     "description": "Galgen + Kopf",
     "graphic": [
       "+---+     ",
@@ -91,7 +78,7 @@
     ]
   },
   {
-    "stage": 7,
+    "stage": 6,
     "description": "Galgen + Kopf + Körper",
     "graphic": [
       "+---+     ",
@@ -104,7 +91,7 @@
     ]
   },
   {
-    "stage": 8,
+    "stage": 7,
     "description": "Galgen + Kopf + Körper + Arm links",
     "graphic": [
       "+---+     ",
@@ -117,7 +104,7 @@
     ]
   },
   {
-    "stage": 9,
+    "stage": 8,
     "description": "Galgen + Kopf + Körper + beide Arme",
     "graphic": [
       "+---+     ",
@@ -130,7 +117,7 @@
     ]
   },
   {
-    "stage": 10,
+    "stage": 9,
     "description": "Galgen + Kopf + Körper + Arme + Bein links",
     "graphic": [
       "+---+     ",
@@ -143,7 +130,7 @@
     ]
   },
   {
-    "stage": 11,
+    "stage": 10,
     "description": "Komplett - Spiel verloren",
     "graphic": [
       "+---+     ",
