@@ -44,7 +44,7 @@ def buchstaben_raten() -> str:
 def print_line():
     print("-"*40)
 
-#if __name__ == "__main__":
-    #eingabe_spieler()
-    #hangman_zeichnen(datenschicht.hangman_vorlage(), 3)
-    #buchstaben_raten()
+if __name__ == "__main__":
+    eingabe_spieler()
+    hangman_zeichnen(datenschicht.hangman_vorlage(), 3)
+    buchstaben_raten()
