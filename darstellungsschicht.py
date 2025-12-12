@@ -3,11 +3,15 @@ import datenschicht
 def eingabe_spieler() -> list:
     spieler = []
     while True:
+
+        #Abfrage von Anzahl und Namen der Spieler
         try:
             anzahl_spieler = int(input("Geben Sie die Anzahl der Mitspieler ein: "))
             for i in range(anzahl_spieler):
                 name_spieler = input(f"Geben Sie den Namen für Spieler {i+1} ein: ")
                 spieler.append(name_spieler)
+
+        #Nur Zahlen zulassen        
         except ValueError:
             (print("Geben Sie eine gültige Anzahl ein!"))
             continue
