@@ -2,31 +2,31 @@ import darstellungsschicht
 import datenschicht
 import os
 
-def buchstabe_pruefen(hiden_wort:str, visible_wort, buchstabe:str) -> str:    
-    for zeichen in range(0,len(visible_wort)):
-        if hiden_wort[zeichen] == buchstabe:
-            visible_wort = visible_wort[0:zeichen] + buchstabe + visible_wort[zeichen+1:]
-    return visible_wort
+def check_char(hiden_word:str, visible_word, buchstabe:str) -> str:    
+    for zeichen in range(0,len(visible_word)):
+        if hiden_word[zeichen] == buchstabe:
+            visible_word = visible_word[0:zeichen] + buchstabe + visible_word[zeichen+1:]
+    return visible_word
 
-def wort_pruefen(wort:str, pruef_wort:str) -> bool:
-    if wort == pruef_wort:
+def check_word(word:str, check_word:str) -> bool:
+    if word == check_word:
         return True
     else:
         return False 
 
-def pruefer_gewonnen(hiden_wort:str, visible_wort:str) -> bool:
+def check_won(hiden_word:str, visible_wort:str) -> bool:
     new_visible_wort = ""
     for i in range(0,len(visible_wort)):
         if visible_wort[i] != " ":
             new_visible_wort += visible_wort[i]
-    return wort_pruefen(new_visible_wort,hiden_wort)
+    return check_word(new_visible_wort,hiden_word)
         
 
 
 def main():
     spieler:list = darstellungsschicht.eingabe_spieler()
-    hiden_wort:str = datenschicht.wort_erzeugen()
-    visible_wort:str = "".join("_" for count in range(0,len(hiden_wort)))
+    hiden_word:str = datenschicht.wort_erzeugen()
+    visible_word:str = "".join("_" for count in range(0,len(hiden_word)))
     hangman_vorlage:list[dict] = datenschicht.hangman_vorlage()
     game_running:bool = True
     falsche_buchstaben = []
@@ -42,31 +42,31 @@ def main():
         darstellungsschicht.hangman_zeichnen(hangman_vorlage,wrong_guesses)
         if len(falsche_buchstaben) > 0:
             print("Falsche Buchstaben: " + ", ".join(falsche_buchstaben))
-        darstellungsschicht.wort_darstellen("".join(zeichen +" " for zeichen in visible_wort))
+        darstellungsschicht.wort_darstellen("".join(zeichen +" " for zeichen in visible_word))
 
         if wrong_guesses == 10:
-            print(f"Ihr habt verloren\nDas Wort war: {hiden_wort}")
+            print(f"Ihr habt verloren\nDas Wort war: {hiden_word}")
             break
         # Buchstaben Überprüfen und verändern
         buchstabe = darstellungsschicht.buchstaben_raten()
         if len(buchstabe) == 1: # überprüfe ob Buchstabe oder Wort eingegeben
             # Wenn Buchstabe eingegeben
-            new_visible_wort = buchstabe_pruefen(hiden_wort,visible_wort,buchstabe)
-            if new_visible_wort != visible_wort:
-                visible_wort = new_visible_wort
+            new_visible_wort = check_char(hiden_word,visible_word,buchstabe)
+            if new_visible_wort != visible_word:
+                visible_word = new_visible_wort
             else:
                 if buchstabe not in falsche_buchstaben:
                     falsche_buchstaben.append(buchstabe)
                 wrong_guesses += 1
         else: 
             # Wenn Wort eingegeben
-            if wort_pruefen(hiden_wort,buchstabe):
-                print(f"\nDu hast gewonnen\nDas Wort war: {hiden_wort}")
+            if check_word(hiden_word,buchstabe):
+                print(f"\nDu hast gewonnen\nDas Wort war: {hiden_word}")
                 game_running = False
             else:
                 wrong_guesses += 1
-        if pruefer_gewonnen(hiden_wort,visible_wort):
-            print(f"\nDu hast gewonnen\nDas Wort war: {hiden_wort}")
+        if check_won(hiden_word,visible_word):
+            print(f"\nDu hast gewonnen\nDas Wort war: {hiden_word}")
             game_running = False
 
 if __name__ == "__main__":
